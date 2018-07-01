@@ -1,7 +1,8 @@
 library(tidyverse)
 library(readxl)
 
-data = BlueSky_Single_Leg_demand
+data <- read_excel("BlueSky_Single-Leg_demand.xls")
+
 
 colnames(data)[2] <- "demanda"
 colnames(data)[1] <- "data"
@@ -32,8 +33,7 @@ g
 
 rmse_1 <- sd(data$demanda)
 
-protection_level_1 <- qnorm(p = valor.critico, mean = meadia_1, sd = rmse_1)
+protection_level_1 <- qnorm(p = valor.critico, mean = media_1, sd = rmse_1)
 
 protection_level_1 <- round(protection_level_1, 0)
-
 
