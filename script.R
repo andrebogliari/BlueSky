@@ -36,3 +36,4 @@ protection_level_1 <- qnorm(p = valor.critico, mean = meadia_1, sd = rmse_1)
 
 protection_level_1 <- round(protection_level_1, 0)
 
+
